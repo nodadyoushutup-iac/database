@@ -1,6 +1,6 @@
 # main.tf
 
-module "database" {
+module "virtual_machine" {
   source  = "spacelift.io/nodadyoushutup/virtual_machine/proxmox"
   # version = "1.0.0"
   vm_id = 101
