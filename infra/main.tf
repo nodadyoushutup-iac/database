@@ -32,3 +32,10 @@ resource "spacelift_context_attachment" "config_database" {
   stack_id   = "database"
   priority   = 100
 }
+
+resource "spacelift_context_attachment" "provider_database" {
+  count = local.component.database ? 1 : 0
+  context_id = "provider"
+  stack_id   = "database"
+  priority   = 100
+}
